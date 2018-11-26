@@ -219,7 +219,7 @@ def load_training_data():
         # The begin-index for the next batch is the current end-index.
         begin = end
 
-    return images, cls, one_hot_encoded(class_numbers=cls, num_classes=num_classes)
+    return images, cls, OneHotEncoder(class_numbers=cls, num_classes=num_classes)
 
 
 def load_test_data():
@@ -231,6 +231,6 @@ def load_test_data():
 
     images, cls = _load_data(filename="test_batch")
 
-    return images, cls, one_hot_encoded(class_numbers=cls, num_classes=num_classes)
+    return images, cls, OneHotEncoder(class_numbers=cls, num_classes=num_classes)
 
 ########################################################################
